@@ -32,7 +32,7 @@ return { -- Autoformat
 		end,
 		formatters_by_ft = {
 			lua = { "stylua" },
-			python = { "ruff" },
+			python = { "pyright" },
 			c = { "clang_format" },
 			cpp = { "clang_format" },
 			javascript = { "prettier", stop_after_first = true },
