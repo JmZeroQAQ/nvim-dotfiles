@@ -62,7 +62,7 @@ return { -- LSP Configuration & Plugins
 
 				-- Rename the variable under your cursor
 				--  Most Language Servers support renaming across files, etc.
-				map("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
+				map("<leader>cr", vim.lsp.buf.rename, "[C]ode[R]ename")
 
 				-- Execute a code action, usually your cursor needs to be on top of an error
 				-- or a suggestion from your LSP for this to activate.
@@ -107,8 +107,6 @@ return { -- LSP Configuration & Plugins
 
 		-- Enable the following language servers
 		local servers = {
-			-- html = { filetypes = { 'html', 'twig', 'hbs' } },
-			-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 			ts_ls = {},
 			lua_ls = {
 				-- cmd = {...},
@@ -198,21 +196,7 @@ return { -- LSP Configuration & Plugins
 					},
 				},
 			},
-			-- rust_analyzer = {
-			--   ['rust-analyzer'] = {
-			--     cargo = {
-			--       features = 'all',
-			--     },
-			--     checkOnSave = true,
-			--     check = {
-			--       command = 'clippy',
-			--     },
-			--   },
-			-- },
 			tailwindcss = {},
-			-- yamlls = {},
-			-- bashls = {},
-			-- cssls = {},
 		}
 
 		-- Ensure the servers and tools above are installed

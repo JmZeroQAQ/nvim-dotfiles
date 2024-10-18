@@ -1,5 +1,6 @@
 -- Format on save and linters
 return {
+	enabled = false,
 	"nvimtools/none-ls.nvim",
 	dependencies = {
 		"nvimtools/none-ls-extras.nvim",
