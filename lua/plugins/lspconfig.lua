@@ -107,7 +107,8 @@ return { -- LSP Configuration & Plugins
 
 		-- Enable the following language servers
 		local servers = {
-			ts_ls = {},
+			-- ts_ls = {},
+			shfmt = {},
 			lua_ls = {
 				-- cmd = {...},
 				-- filetypes { ...},
@@ -159,7 +160,7 @@ return { -- LSP Configuration & Plugins
 						disableOrganizeImports = true, -- Using Ruff's import organizer
 						disableLanguageServices = false,
 						analysis = {
-							ignore = { "*" },          -- Ignore all files for analysis to exclusively use Ruff for linting
+							ignore = { "*" }, -- Ignore all files for analysis to exclusively use Ruff for linting
 							typeCheckingMode = "off",
 							diagnosticMode = "openFilesOnly", -- Only analyze open files
 							useLibraryCodeForTypes = true,
@@ -196,7 +197,7 @@ return { -- LSP Configuration & Plugins
 					},
 				},
 			},
-			tailwindcss = {},
+			-- tailwindcss = {},
 		}
 
 		-- Ensure the servers and tools above are installed

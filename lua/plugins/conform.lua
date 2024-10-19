@@ -32,6 +32,7 @@ return { -- Autoformat
 		end,
 		formatters_by_ft = {
 			lua = { "stylua" },
+			sh = { "shfmt" },
 			python = { "pyright" },
 			c = { "clang_format" },
 			cpp = { "clang_format" },
