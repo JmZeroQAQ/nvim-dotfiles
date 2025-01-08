@@ -1,0 +1,7 @@
+{
+    "diagnostics.disable": [
+        "luadoc-miss-see-name",
+        "undefined-field",
+        "undefined-doc-name"
+    ]
+}

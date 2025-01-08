@@ -27,13 +27,12 @@ local servers = {
 
 return {
   {
-    "williamboman/mason.nvim",
-  },
-  {
-    "williamboman/mason-lspconfig.nvim",
-  },
-  {
     "neovim/nvim-lspconfig",
+    dependencies = {
+      "williamboman/mason.nvim",
+      "williamboman/mason-lspconfig.nvim",
+    },
+    event = { "BufRead", "BufNewFile" },
     config = function()
       require("mason").setup()
       require("mason-lspconfig").setup({
@@ -78,23 +77,6 @@ return {
         ui = {
           devicon = false,
           border = 'single',
-        },
-        outline = {
-          keys = {
-            toggle_or_jump = '<cr>',
-          },
-        },
-        finder = {
-          keys = {
-            edit = '<C-o>',
-            toggle_or_open = '<cr>',
-          },
-        },
-        definition = {
-          keys = {
-            edit = '<C-o>',
-            vsplit = '<C-v>',
-          },
         },
       })
     end
