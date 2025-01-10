@@ -2,19 +2,10 @@ local servers = {
   lua_ls = {
     settings = {
       Lua = {
-        -- diagnostics = {
-        --   unusedLocalExclude = { '_*' },
-        --   globals = { 'vim' },
-        --   disable = {
-        --     'luadoc-miss-see-name',
-        --     'undefined-field',
-        --   },
-        -- },
         runtime = { version = 'LuaJIT' },
         workspace = {
           library = {
-            vim.env.VIMRUNTIME .. '/lua',
-            '${3rd}/busted/library',
+            vim.env.VIMRUNTIME,
             '${3rd}/luv/library',
           },
           checkThirdParty = false,
@@ -54,12 +45,6 @@ return {
         }, conf))
       end
 
-      vim.lsp.handlers['workspace/diagnostic/refresh'] = function(_, _, ctx)
-        local ns = vim.lsp.diagnostic.get_namespace(ctx.client_id)
-        local bufnr = vim.api.nvim_get_current_buf()
-        vim.diagnostic.reset(ns, bufnr)
-        return true
-      end
       vim.diagnostic.config({
         virtual_text = {
           prefix = '❯',
@@ -76,7 +61,13 @@ return {
       require('lspsaga').setup({
         ui = {
           devicon = false,
-          border = 'single',
+          border = 'rounded',
+        },
+        lightbulb = {
+          enable = false,
+        },
+        outline = {
+          layout = 'float',
         },
       })
     end
