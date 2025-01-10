@@ -2,14 +2,14 @@ local servers = {
   lua_ls = {
     settings = {
       Lua = {
-        diagnostics = {
-          unusedLocalExclude = { '_*' },
-          globals = { 'vim' },
-          disable = {
-            'luadoc-miss-see-name',
-            'undefined-field',
-          },
-        },
+        -- diagnostics = {
+        --   unusedLocalExclude = { '_*' },
+        --   globals = { 'vim' },
+        --   disable = {
+        --     'luadoc-miss-see-name',
+        --     'undefined-field',
+        --   },
+        -- },
         runtime = { version = 'LuaJIT' },
         workspace = {
           library = {

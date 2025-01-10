@@ -8,12 +8,6 @@ return {
   opts = {
     keymap = {
       preset = 'default',
-      ['<Tab>'] = {
-        'select_next',
-        'snippet_forward',
-        'fallback',
-      },
-      ['<S-Tab>'] = { 'select_prev', 'snippet_backward', 'fallback' },
       ['<CR>'] = { 'accept', 'fallback' },
     },
     completion = {
@@ -25,7 +19,7 @@ return {
       },
       documentation = {
         auto_show = true,
-        auto_show_delay_ms = 200,
+        auto_show_delay_ms = 300,
         treesitter_highlighting = true,
         window = {
           border = 'rounded',
