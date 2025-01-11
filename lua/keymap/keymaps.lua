@@ -15,3 +15,7 @@ util.map({ "n" }, "[d", function() vim.cmd([[Lspsaga diagnostic_jump_prev]]) end
 
 -- Conform
 util.map({ "n" }, "<leader>cf", function() require("conform").format({ async = true }) end, { desc = "code format" })
+
+
+-- Neotree
+util.map({ "n" }, "<leader>e", function() vim.cmd([[Neotree toggle]]) end, { desc = "open explorer" })
