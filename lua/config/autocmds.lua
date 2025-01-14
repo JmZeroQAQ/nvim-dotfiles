@@ -25,3 +25,12 @@ util.au('InsertEnter', {
     require('utils.pairs').setup({})
   end,
 })
+
+util.au('FileType', {
+  group = group,
+  pattern = { "help" },
+  callback = function()
+    util.map({ "n" }, "q", function() vim.cmd([[close]]) end, { desc = "quit help window", buffer = 0 })
+  end,
+})
+
