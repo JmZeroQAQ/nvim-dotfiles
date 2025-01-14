@@ -19,3 +19,8 @@ util.map({ "n" }, "<leader>cf", function() require("conform").format({ async = t
 
 -- Neotree
 util.map({ "n" }, "<leader>e", function() vim.cmd([[Neotree toggle]]) end, { desc = "open explorer" })
+
+
+-- Snacks
+util.map({ "n" }, "<leader>bd", function() Snacks.bufdelete() end, { desc = "buffer delete" })
+util.map({ "n", "t" }, "<C-/>", function() Snacks.terminal() end, { desc = "toggle terminal" })

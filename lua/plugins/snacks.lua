@@ -15,22 +15,4 @@ return {
     words = { enabled = true },
     animate = { enabled = false },
   },
-
-  keys = {
-    {
-      '<leader>bd',
-      function()
-        Snacks.bufdelete()
-      end,
-      desc = 'Delete Buffer',
-    },
-    {
-      '<c-/>',
-      function()
-        Snacks.terminal()
-      end,
-      mode = { 'n', 't' },
-      desc = 'Toggle Terminal',
-    },
-  },
 }
