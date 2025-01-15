@@ -24,6 +24,7 @@ util.map({ "n" }, "<leader>e", function() vim.cmd([[Neotree toggle]]) end, { des
 -- Snacks
 util.map({ "n" }, "<leader>bd", function() Snacks.bufdelete() end, { desc = "buffer delete" })
 util.map({ "n", "t" }, "<C-/>", function() Snacks.terminal() end, { desc = "toggle terminal" })
+util.map({ "n" }, "<leader>n", function() Snacks.notifier.show_history() end, { desc = "notification history" })
 
 -- Gitsign
 util.map({ "n" }, "]g", function() vim.cmd([[Gitsigns next_hunk]]) end, { desc = "goto next git hunk" })
