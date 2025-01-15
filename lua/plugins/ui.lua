@@ -31,4 +31,9 @@ return {
     opts = {},
     cmd = { 'Neotree' },
   },
+  {
+    'lewis6991/gitsigns.nvim',
+    event = 'BufRead',
+    opts = {},
+  },
 }
