@@ -31,7 +31,6 @@ return {
       })
 
       local on_attach = function(client, _)
-        vim.opt.omnifunc = 'v:lua.vim.lsp.omnifunc'
         client.server_capabilities.semanticTokensProvider = nil
       end
 
@@ -50,8 +49,6 @@ return {
           prefix = '❯',
         },
       })
-
-      vim.diagnostic.config({ signs = { text = { 'E', 'W', 'I', 'H' } } })
     end,
   },
   {
