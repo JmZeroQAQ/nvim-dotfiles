@@ -14,6 +14,20 @@ local servers = {
       },
     },
   },
+  gopls = {
+    settings = {
+      gopls = {
+        usePlaceholders = true,
+        completeUnimported = true,
+        analyses = {
+          unusedparams = true,
+        },
+        -- semanticTokens = true,
+        staticcheck = true,
+      },
+    },
+  },
+  clangd = {},
 }
 
 return {
@@ -46,7 +60,7 @@ return {
 
       vim.diagnostic.config({
         virtual_text = {
-          prefix = '❯',
+          prefix = '●',
         },
       })
     end,
