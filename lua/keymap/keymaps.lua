@@ -31,7 +31,7 @@ util.map({ "n" }, "]g", function() vim.cmd([[Gitsigns next_hunk]]) end, { desc =
 util.map({ "n" }, "[g", function() vim.cmd([[Gitsigns prev_hunk]]) end, { desc = "goto prev git hunk" })
 
 -- FzfLua
-util.map({ "n" }, "<leader>ff", function() vim.cmd([[FzfLua files]]) end, { desc = "fuzzy find files" })
+util.map({ "n" }, "<leader><space>", function() vim.cmd([[FzfLua files]]) end, { desc = "fuzzy find files" })
 util.map({ "n" }, "<leader>fb", function() vim.cmd([[FzfLua buffers]]) end, { desc = "fuzzy find buffers" })
 util.map({ "n" }, "<leader>fo", function() vim.cmd([[FzfLua oldfiles]]) end, { desc = "fuzzy find oldfiles" })
 util.map({ "n" }, "<leader>fh", function() vim.cmd([[FzfLua helptags]]) end, { desc = "fuzzy find helptags" })
