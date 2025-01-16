@@ -27,7 +27,7 @@ return {
         },
       },
       accept = { auto_brackets = { enabled = true } },
-      ghost_text = { enabled = true },
+      ghost_text = { enabled = false },
     },
     sources = {
       default = { 'snippets', 'lsp', 'path', 'buffer' },
