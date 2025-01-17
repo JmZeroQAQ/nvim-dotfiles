@@ -26,7 +26,12 @@ util.map({ "n" }, "<leader>cf", function() require("conform").format({ async = t
 
 
 -- Neotree
-util.map({ "n" }, "<leader>e", function() vim.cmd([[Neotree toggle]]) end, { desc = "open explorer" })
+util.map({ "n" }, "<leader>e",
+  function()
+    local root = require("utils.root").get()
+    vim.cmd('Neotree toggle reveal dir=' .. root)
+  end,
+  { desc = "open explorer" })
 
 
 -- Snacks
@@ -39,7 +44,13 @@ util.map({ "n" }, "]g", function() vim.cmd([[Gitsigns next_hunk]]) end, { desc =
 util.map({ "n" }, "[g", function() vim.cmd([[Gitsigns prev_hunk]]) end, { desc = "goto prev git hunk" })
 
 -- FzfLua
-util.map({ "n" }, "<leader><space>", function() vim.cmd([[FzfLua files]]) end, { desc = "fuzzy find files" })
+util.map({ "n" },
+  "<leader><space>",
+  function()
+    local root = require("utils.root").get()
+    vim.cmd("FzfLua files cwd=" .. root)
+  end,
+  { desc = "fuzzy find files" })
 util.map({ "n" }, "<leader>fb", function() vim.cmd([[FzfLua buffers]]) end, { desc = "fuzzy find buffers" })
 util.map({ "n" }, "<leader>fo", function() vim.cmd([[FzfLua oldfiles]]) end, { desc = "fuzzy find oldfiles" })
 util.map({ "n" }, "<leader>fh", function() vim.cmd([[FzfLua helptags]]) end, { desc = "fuzzy find helptags" })
