@@ -63,6 +63,9 @@ return {
           prefix = '●',
         },
       })
+
+      -- ERROR, WARN, INFO, HINT
+      vim.diagnostic.config({ signs = { text = { ' ', ' ', ' ', ' ' } } })
     end,
   },
   {
