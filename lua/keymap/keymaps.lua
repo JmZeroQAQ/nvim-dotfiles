@@ -17,6 +17,9 @@ util.map({ "n" }, "<leader>cr", function() vim.cmd([[Lspsaga rename]]) end, { de
 util.map({ "n" }, "<leader>co", function() vim.cmd([[Lspsaga outline]]) end, { desc = "code outline" })
 util.map({ "n" }, "]d", function() vim.cmd([[Lspsaga diagnostic_jump_next]]) end, { desc = "jump next diagnostic" })
 util.map({ "n" }, "[d", function() vim.cmd([[Lspsaga diagnostic_jump_prev]]) end, { desc = "jump prev diagnostic" })
+util.map({ "n" }, "gd", function() vim.cmd([[Lspsaga goto_definition]]) end, { desc = "goto definition" })
+util.map({ "n" }, "gy", function() vim.cmd([[Lspsaga goto_type_definition]]) end, { desc = "goto type_definition" })
+
 
 -- Conform
 util.map({ "n" }, "<leader>cf", function() require("conform").format({ async = true }) end, { desc = "code format" })
