@@ -9,8 +9,6 @@ util.map({ "n" }, "j", "gj", { silent = true })
 
 util.map({ "n" }, "<Esc>", function() vim.cmd([[nohl]]) end, { silent = true, desc = "clear highlights" })
 util.map({ "n" }, "<C-s>", function() vim.cmd([[write]]) end, { silent = true, desc = "save file" })
-util.map({ "n" }, "H", function() vim.cmd([[bn]]) end, { silent = true, desc = "prev buf" })
-util.map({ "n" }, "L", function() vim.cmd([[bp]]) end, { silent = true, desc = "next buf" })
 util.map({ "n" }, "<leader>qq", function() vim.cmd([[qa!]]) end, { silent = true, desc = "quit all" })
 
 -- Window

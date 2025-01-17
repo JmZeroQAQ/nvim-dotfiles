@@ -1,6 +1,11 @@
 -- Set leader key
 local  util= require("utils.util")
 
+-- Bufferline
+util.map({ "n" }, "H", function() vim.cmd([[BufferLineCyclePrev]]) end, { desc = "prev buf" })
+util.map({ "n" }, "L", function() vim.cmd([[BufferLineCycleNext]]) end, { desc = "next buf" })
+util.map({ "n" }, "<leader>bD", function() vim.cmd([[BufferLineCloseOthers]]) end, { desc = "delete other buffers" })
+
 -- Lspconfig
 util.map({ "n" }, "<leader>cl", function() vim.cmd([[LspInfo]]) end, { desc = "LSP Information" })
 
