@@ -18,7 +18,19 @@ return {
     version = '*',
     dependencies = 'nvim-tree/nvim-web-devicons',
     event = { 'BufRead', 'BufNewFile' },
-    opts = {},
+    opts = {
+      options = {
+        always_show_bufferline = false,
+        offsets = {
+          {
+            filetype = 'neo-tree',
+            text = 'Neo-tree',
+            highlight = 'Directory',
+            text_align = 'left',
+          },
+        },
+      },
+    },
   },
   {
     'nvim-neo-tree/neo-tree.nvim',
