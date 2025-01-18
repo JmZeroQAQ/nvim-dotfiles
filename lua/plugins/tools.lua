@@ -3,7 +3,15 @@ return {
     'ibhagwan/fzf-lua',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     cmd = { 'FzfLua' },
-    opts = {},
+    opts = {
+      keymap = {
+        builtin = {
+          true,
+          ['<c-f>'] = 'preview-page-down',
+          ['<c-b>'] = 'preview-page-up',
+        },
+      },
+    },
   },
   {
     'glepnir/dbsession.nvim',
