@@ -41,7 +41,7 @@ return {
     config = function()
       require('mason').setup()
       require('mason-lspconfig').setup({
-        ensure_installed = vim.tbl_keys(servers),
+        ensure_installed = { "lua_ls", "stylua" },
       })
 
       local on_attach = function(client, _)
