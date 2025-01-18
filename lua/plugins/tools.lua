@@ -18,4 +18,8 @@ return {
     cmd = { 'SessionSave', 'SessionDelete', 'SessionLoad' },
     opts = {},
   },
+  {
+    'folke/flash.nvim',
+    event = 'VeryLazy',
+  },
 }

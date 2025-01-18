@@ -41,7 +41,7 @@ return {
     config = function()
       require('mason').setup()
       require('mason-lspconfig').setup({
-        ensure_installed = { "lua_ls", "stylua" },
+        ensure_installed = { "lua_ls" },
       })
 
       local on_attach = function(client, _)

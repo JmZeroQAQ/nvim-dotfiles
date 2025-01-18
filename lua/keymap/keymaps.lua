@@ -55,3 +55,13 @@ util.map({ "n" }, "<leader>fb", function() vim.cmd([[FzfLua buffers]]) end, { de
 util.map({ "n" }, "<leader>fo", function() vim.cmd([[FzfLua oldfiles]]) end, { desc = "fuzzy find oldfiles" })
 util.map({ "n" }, "<leader>fh", function() vim.cmd([[FzfLua helptags]]) end, { desc = "fuzzy find helptags" })
 util.map({ "n" }, "<leader>fl", function() vim.cmd([[FzfLua live_grep]]) end, { desc = "fuzzy live grep" })
+util.map({ "n" }, "<leader>sk", function() vim.cmd([[FzfLua keymaps]]) end, { desc = "search keymap" })
+
+
+-- dbsession
+util.map({ "n" }, "<leader>ss", function() vim.cmd([[SessionSave]]) end, { desc = "Session save" })
+util.map({ "n" }, "<leader>sl", function() vim.cmd([[SessionLoad]]) end, { desc = "Session load" })
+
+
+-- flash
+util.map({ "n", "x" }, "s", function() require("flash").jump() end, { desc = "flash" })
