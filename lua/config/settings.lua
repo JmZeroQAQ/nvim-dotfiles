@@ -32,6 +32,7 @@ opt.scrolloff = 2
 opt.sidescrolloff = 5
 
 opt.list = true
+opt.termguicolors = true
 opt.listchars = 'tab:» ,nbsp:+,trail:·,extends:→,precedes:←,'
 
 opt.splitright = true
