@@ -20,6 +20,8 @@ util.map({ "n" }, "[d", function() vim.cmd([[Lspsaga diagnostic_jump_prev]]) end
 util.map({ "n" }, "gd", function() vim.cmd([[Lspsaga goto_definition]]) end, { desc = "goto definition" })
 util.map({ "n" }, "gy", function() vim.cmd([[Lspsaga goto_type_definition]]) end, { desc = "goto type_definition" })
 
+-- FzfLua
+util.map({ "n" }, "gr", function() vim.cmd([[FzfLua lsp_references jump_to_single_result=true ignore_current_line=true]]) end, { desc = "goto references" })
 
 -- Conform
 util.map({ "n" }, "<leader>cf", function() require("conform").format({ async = true }) end, { desc = "code format" })
@@ -38,6 +40,8 @@ util.map({ "n" }, "<leader>e",
 util.map({ "n" }, "<leader>bd", function() Snacks.bufdelete() end, { desc = "buffer delete" })
 util.map({ "n", "t" }, "<C-/>", function() Snacks.terminal() end, { desc = "toggle terminal" })
 util.map({ "n" }, "<leader>n", function() Snacks.notifier.show_history() end, { desc = "notification history" })
+util.map({ "n" }, "<leader>.", function() Snacks.scratch() end, { desc = "toggle scratch buffer" })
+util.map({ "n" }, "<leader>S", function() Snacks.scratch.select() end, { desc = "select scratch buffer" })
 
 -- Gitsign
 util.map({ "n" }, "]g", function() vim.cmd([[Gitsigns next_hunk]]) end, { desc = "goto next git hunk" })
@@ -51,6 +55,12 @@ util.map({ "n" },
     vim.cmd("FzfLua files cwd=" .. root)
   end,
   { desc = "fuzzy find files" })
+util.map({ "n" },
+  "<leader>fc",
+  function()
+    vim.cmd("FzfLua files cwd=" .. vim.fn.stdpath('config'))
+  end,
+  { desc = "fuzzy find config" })
 util.map({ "n" }, "<leader>fb", function() vim.cmd([[FzfLua buffers]]) end, { desc = "fuzzy find buffers" })
 util.map({ "n" }, "<leader>fo", function() vim.cmd([[FzfLua oldfiles]]) end, { desc = "fuzzy find oldfiles" })
 util.map({ "n" }, "<leader>fh", function() vim.cmd([[FzfLua helptags]]) end, { desc = "fuzzy find helptags" })

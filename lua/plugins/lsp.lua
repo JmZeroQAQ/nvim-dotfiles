@@ -24,6 +24,15 @@ local servers = {
         },
         -- semanticTokens = true,
         staticcheck = true,
+        hints = {
+          assignVariableTypes = true,
+          compositeLiteralFields = true,
+          compositeLiteralTypes = true,
+          constantValues = true,
+          functionTypeParameters = true,
+          parameterNames = true,
+          rangeVariableTypes = true,
+        },
       },
     },
   },
@@ -41,7 +50,7 @@ return {
     config = function()
       require('mason').setup()
       require('mason-lspconfig').setup({
-        ensure_installed = { "lua_ls" },
+        ensure_installed = { 'lua_ls' },
       })
 
       local on_attach = function(client, _)

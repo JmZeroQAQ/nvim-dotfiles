@@ -13,5 +13,6 @@ return {
     scroll = { enabled = false },
     statuscolumn = { enabled = true },
     animate = { enabled = false },
+    scratch = { enabled = true },
   },
 }
