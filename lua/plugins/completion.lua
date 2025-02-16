@@ -31,7 +31,9 @@ return {
     },
     sources = {
       default = { 'snippets', 'lsp', 'path', 'buffer' },
-      cmdline = {},
+    },
+    cmdline = {
+      enabled = false,
     },
     signature = { enabled = true },
   },
