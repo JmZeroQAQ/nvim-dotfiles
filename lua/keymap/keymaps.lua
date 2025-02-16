@@ -27,7 +27,7 @@ util.map({ "n" }, "gr", function() Snacks.picker.lsp_references() end, { desc = 
 util.map({ "n" }, "<leader>cf", function() require("conform").format({ async = true }) end, { desc = "code format" })
 
 
--- Neotree
+-- Explorer
 util.map({ "n" }, "<leader>e",
   function()
     local root = require("utils.root").get()

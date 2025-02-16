@@ -19,6 +19,11 @@ return {
     opts = {},
   },
   {
+    'windwp/nvim-autopairs',
+    event = 'InsertEnter',
+    opts = {},
+  },
+  {
     'folke/flash.nvim',
     event = 'VeryLazy',
   },

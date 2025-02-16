@@ -19,12 +19,12 @@ util.au('BufEnter', {
   end,
 })
 
-util.au('InsertEnter', {
-  group = group,
-  callback = function()
-    require('utils.pairs').setup({})
-  end,
-})
+-- util.au('InsertEnter', {
+--   group = group,
+--   callback = function()
+--     require('utils.pairs').setup({})
+--   end,
+-- })
 
 util.au('FileType', {
   group = group,
