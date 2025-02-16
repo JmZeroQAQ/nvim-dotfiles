@@ -21,27 +21,8 @@ return {
     opts = {
       options = {
         always_show_bufferline = false,
-        offsets = {
-          {
-            filetype = 'neo-tree',
-            text = 'Neo-tree',
-            highlight = 'Directory',
-            text_align = 'left',
-          },
-        },
       },
     },
-  },
-  {
-    'nvim-neo-tree/neo-tree.nvim',
-    branch = 'v3.x',
-    dependencies = {
-      'nvim-lua/plenary.nvim',
-      'nvim-tree/nvim-web-devicons',
-      'MunifTanjim/nui.nvim',
-    },
-    opts = {},
-    cmd = { 'Neotree' },
   },
   {
     'lewis6991/gitsigns.nvim',

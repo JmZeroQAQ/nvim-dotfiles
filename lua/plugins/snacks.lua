@@ -14,5 +14,6 @@ return {
     statuscolumn = { enabled = true },
     animate = { enabled = false },
     scratch = { enabled = true },
+    picker = { enabled = true },
   },
 }

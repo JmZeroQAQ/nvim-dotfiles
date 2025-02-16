@@ -20,8 +20,8 @@ util.map({ "n" }, "[d", function() vim.cmd([[Lspsaga diagnostic_jump_prev]]) end
 util.map({ "n" }, "gd", function() vim.cmd([[Lspsaga goto_definition]]) end, { desc = "goto definition" })
 util.map({ "n" }, "gy", function() vim.cmd([[Lspsaga goto_type_definition]]) end, { desc = "goto type_definition" })
 
--- FzfLua
-util.map({ "n" }, "gr", function() vim.cmd([[FzfLua lsp_references jump_to_single_result=true ignore_current_line=true]]) end, { desc = "goto references" })
+-- Picker
+util.map({ "n" }, "gr", function() Snacks.picker.lsp_references() end, { desc = "goto references" })
 
 -- Conform
 util.map({ "n" }, "<leader>cf", function() require("conform").format({ async = true }) end, { desc = "code format" })
@@ -31,7 +31,7 @@ util.map({ "n" }, "<leader>cf", function() require("conform").format({ async = t
 util.map({ "n" }, "<leader>e",
   function()
     local root = require("utils.root").get()
-    vim.cmd('Neotree toggle reveal dir=' .. root)
+     Snacks.explorer({ cwd = root })
   end,
   { desc = "open explorer" })
 
@@ -47,25 +47,25 @@ util.map({ "n" }, "<leader>S", function() Snacks.scratch.select() end, { desc = 
 util.map({ "n" }, "]g", function() vim.cmd([[Gitsigns next_hunk]]) end, { desc = "goto next git hunk" })
 util.map({ "n" }, "[g", function() vim.cmd([[Gitsigns prev_hunk]]) end, { desc = "goto prev git hunk" })
 
--- FzfLua
+-- Picker
 util.map({ "n" },
   "<leader><space>",
   function()
     local root = require("utils.root").get()
-    vim.cmd("FzfLua files cwd=" .. root)
+    Snacks.picker.files({ cwd = root } )
   end,
   { desc = "fuzzy find files" })
 util.map({ "n" },
   "<leader>fc",
   function()
-    vim.cmd("FzfLua files cwd=" .. vim.fn.stdpath('config'))
+    Snacks.picker.files({ cwd = vim.fn.stdpath("config") })
   end,
   { desc = "fuzzy find config" })
-util.map({ "n" }, "<leader>fb", function() vim.cmd([[FzfLua buffers]]) end, { desc = "fuzzy find buffers" })
-util.map({ "n" }, "<leader>fo", function() vim.cmd([[FzfLua oldfiles]]) end, { desc = "fuzzy find oldfiles" })
-util.map({ "n" }, "<leader>fh", function() vim.cmd([[FzfLua helptags]]) end, { desc = "fuzzy find helptags" })
-util.map({ "n" }, "<leader>fl", function() vim.cmd([[FzfLua live_grep]]) end, { desc = "fuzzy live grep" })
-util.map({ "n" }, "<leader>sk", function() vim.cmd([[FzfLua keymaps]]) end, { desc = "search keymap" })
+util.map({ "n" }, "<leader>fb", function() Snacks.picker.buffers() end, { desc = "fuzzy find buffers" })
+util.map({ "n" }, "<leader>fo", function() Snacks.picker.recent() end, { desc = "fuzzy find oldfiles" })
+util.map({ "n" }, "<leader>fh", function() Snacks.picker.help() end, { desc = "fuzzy find helptags" })
+util.map({ "n" }, "<leader>fl", function() Snacks.picker.grep() end, { desc = "fuzzy live grep" })
+util.map({ "n" }, "<leader>sk", function() Snacks.picker.keymaps() end, { desc = "search keymap" })
 
 
 -- dbsession
