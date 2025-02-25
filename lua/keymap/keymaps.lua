@@ -39,6 +39,7 @@ util.map({ "n" }, "<leader>e",
 -- Snacks
 util.map({ "n" }, "<leader>bd", function() Snacks.bufdelete() end, { desc = "buffer delete" })
 util.map({ "n", "t" }, "<C-/>", function() Snacks.terminal() end, { desc = "toggle terminal" })
+util.map({ "n", "t" }, "<C-\\>", function() Snacks.terminal() end, { desc = "toggle terminal" })
 util.map({ "n" }, "<leader>n", function() Snacks.notifier.show_history() end, { desc = "notification history" })
 util.map({ "n" }, "<leader>.", function() Snacks.scratch() end, { desc = "toggle scratch buffer" })
 util.map({ "n" }, "<leader>S", function() Snacks.scratch.select() end, { desc = "select scratch buffer" })
