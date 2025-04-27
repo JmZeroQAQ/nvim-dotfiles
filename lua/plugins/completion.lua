@@ -35,6 +35,6 @@ return {
     cmdline = {
       enabled = false,
     },
-    signature = { enabled = true },
+    signature = { window = {border = 'rounded'} },
   },
 }

@@ -34,6 +34,7 @@ opt.sidescrolloff = 5
 opt.list = true
 opt.termguicolors = true
 opt.listchars = 'tab:» ,nbsp:+,trail:·,extends:→,precedes:←,'
+opt.winborder = "rounded"
 
 opt.splitright = true
 opt.splitbelow = true
@@ -44,3 +45,4 @@ opt.signcolumn = 'yes'
 opt.spelloptions = 'camel'
 -- opt.textwidth = 80
 -- opt.colorcolumn = "+0"
+vim.g.health = { style = "float" }
