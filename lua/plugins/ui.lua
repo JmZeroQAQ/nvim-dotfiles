@@ -20,7 +20,6 @@ return {
     event = { 'BufRead', 'BufNewFile' },
     opts = {
       options = {
-        mode = "tabs",
         always_show_bufferline = false,
       },
     },

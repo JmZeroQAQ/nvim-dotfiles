@@ -45,4 +45,14 @@ opt.signcolumn = 'yes'
 opt.spelloptions = 'camel'
 -- opt.textwidth = 80
 -- opt.colorcolumn = "+0"
-vim.g.health = { style = "float" }
+opt.foldmethod = "indent"
+opt.fillchars = {
+  foldopen = "",
+  foldclose = "",
+  fold = " ",
+  foldsep = " ",
+  diff = "╱",
+  eob = " ",
+}
+opt.foldlevel = 99
+opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize", "help", "globals", "skiprtp", "folds" }

@@ -1,5 +1,5 @@
 -- Set leader key
-local  util= require("utils.util")
+local  util = require("utils.util")
 
 -- Bufferline
 util.map({ "n" }, "H", function() vim.cmd([[BufferLineCyclePrev]]) end, { desc = "prev buf" })
@@ -40,8 +40,7 @@ util.map({ "n" }, "<leader>e",
 util.map({ "n" }, "<leader>bd", function() Snacks.bufdelete() end, { desc = "buffer delete" })
 util.map({ "n", "t" }, "<C-/>", function() Snacks.terminal() end, { desc = "toggle terminal" })
 util.map({ "n", "t" }, "<C-\\>", function() Snacks.terminal() end, { desc = "toggle terminal" })
-util.map({ "n" }, "<leader>n", function() Snacks.notifier.show_history() end, { desc = "notification history" })
-util.map({ "n" }, "<leader>.", function() Snacks.scratch() end, { desc = "toggle scratch buffer" })
+util.map({ "n" }, "<leader>n", function() Snacks.notifier.show_history() end, { desc = "notification history" }) util.map({ "n" }, "<leader>.", function() Snacks.scratch() end, { desc = "toggle scratch buffer" })
 util.map({ "n" }, "<leader>S", function() Snacks.scratch.select() end, { desc = "select scratch buffer" })
 
 -- Gitsign
@@ -76,3 +75,6 @@ util.map({ "n" }, "<leader>sl", function() vim.cmd([[SessionLoad]]) end, { desc 
 
 -- flash
 util.map({ "n", "x" }, "s", function() require("flash").jump() end, { desc = "flash" })
+
+-- diagnostic
+util.map({ "n" }, "<leader>cd", vim.diagnostic.open_float, { desc = "Line Diagnostic" })
