@@ -65,7 +65,7 @@ util.au('BufReadPost', {
   desc = 'go to last location when opening a buffer',
   group = group,
   callback = function(event)
-    local exclude = { 'gicommit' }
+    local exclude = { 'gitcommit' }
     local buf = event.buf
     if vim.tbl_contains(exclude, vim.bo[buf].filetype) then
       return
